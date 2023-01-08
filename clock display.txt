@@ -1,0 +1,47 @@
+while(u<270) {
+              myGLCD.setColor(255, 255, 255);
+           u=uu%360;
+           x=(int)(230+(int)(120*cos((u * PI) / 180)));
+           y=(int)(160+(int)(120* sin((u * PI) / 180)));
+           myGLCD.drawLine(230, 160, x, y);
+           uu=uu+30; 
+           }
+           
+   myGLCD.setColor(0, 0, 0);
+   myGLCD.fillCircle(230,160, 100);
+   u=0;uu=-90;
+
+         while(u<270) {
+           myGLCD.setColor(0, 255, 0);
+           u=uu%360;
+           x=(int)(230+(int)(90*cos((u * PI) / 180)));
+           y=(int)(160+(int)(90* sin((u * PI) / 180)));
+           myGLCD.printNumI(cislo+1, x-2, y-4);
+           cislo++;
+           if(cislo>11){cislo=0;}
+           uu=uu+30; 
+           }
+u=0;uu=-90;
+      while(u<270) {   //Sekundova
+           u=uu%360;
+           myGLCD.setColor(0, 0, 0); 
+           myGLCD.fillCircle(230, 160, 5);
+           myGLCD.drawLine(230, 160, e, f);
+           myGLCD.fillCircle(230, 160, 5); 
+           myGLCD.drawLine(230, 160, x, y);
+           
+           x=(int)(230+(int)(110*cos((u * PI) / 180)));
+           y=(int)(160+(int)(110*sin((u * PI) / 180)));
+           e=(int)(230+(int)(60*cos((u * PI) / 180)));
+           f=(int)(160+(int)(60*sin((u * PI) / 180)));
+           
+           myGLCD.setColor(255, 0, 0);
+           myGLCD.fillCircle(230, 160, 5);
+           myGLCD.drawLine(230, 160, x, y);
+           delay(1000);
+           myGLCD.setColor(255, 255, 255);
+           myGLCD.fillCircle(230, 160, 5);
+           myGLCD.drawLine(230, 160, e, f);
+           uu=uu+6;
+           if(u>=270) {u=0; uu=-83;}}
+           u=0;uu=-90;
